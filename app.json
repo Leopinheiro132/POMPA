@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Controle de Gastos Moto",
+    "slug": "controle-gastos-moto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "controle-gastos",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "androidNavigationBar": {
+      "backgroundColor": "#0f172a",
+      "barStyle": "light-content"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f172a"
+      },
+      "package": "com.leo.controlegastosmoto",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#f59e0b"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permite rastrear km da moto em segundo plano para o odômetro automático.",
+          "locationWhenInUsePermission": "Permite rastrear km da moto para o odômetro."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Permite usar o acelerômetro para estimar km percorridos."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
